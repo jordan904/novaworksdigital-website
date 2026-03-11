@@ -70,7 +70,7 @@ if (contactForm) {
     console.log('Form submitted:', data);
 
     // Redirect to thank you page
-    window.location.href = 'thankyou.html';
+    window.location.href = 'thankyou';
   });
 }
 
