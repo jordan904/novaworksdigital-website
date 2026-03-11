@@ -62,15 +62,28 @@ if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // Collect form data
     const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
+    const submitBtn = contactForm.querySelector('.form-submit');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
 
-    // Log for demo purposes
-    console.log('Form submitted:', data);
-
-    // Redirect to thank you page
-    window.location.href = 'thankyou';
+    fetch(contactForm.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        window.location.href = 'thankyou';
+      } else {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Send Message <span class="btn-arrow">&rarr;</span>';
+        alert('Something went wrong. Please try again.');
+      }
+    }).catch(() => {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = 'Send Message <span class="btn-arrow">&rarr;</span>';
+      alert('Something went wrong. Please try again.');
+    });
   });
 }
 
