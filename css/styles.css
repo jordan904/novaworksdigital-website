@@ -173,6 +173,13 @@ input, textarea, select {
   font-size: 0.875rem;
 }
 
+.nav-logo .logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
