@@ -81,18 +81,18 @@
     }
 
     .profile-logo {
-      width: 88px;
-      height: 88px;
-      background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       margin: 0 auto 20px;
-      font-weight: 800;
-      font-size: 2rem;
-      letter-spacing: -0.02em;
       box-shadow: 0 0 40px rgba(139, 92, 246, 0.3), 0 0 80px rgba(139, 92, 246, 0.1);
+      overflow: hidden;
+    }
+
+    .profile-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .profile h1 {
@@ -252,16 +252,63 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    .profile { animation: fadeUp 0.5s ease forwards; }
-    .social-icons { animation: fadeUp 0.5s ease 0.1s forwards; opacity: 0; }
-    .link-card:nth-child(1) { animation: fadeUp 0.4s ease 0.15s forwards; opacity: 0; }
-    .link-card:nth-child(2) { animation: fadeUp 0.4s ease 0.22s forwards; opacity: 0; }
-    .link-card:nth-child(3) { animation: fadeUp 0.4s ease 0.29s forwards; opacity: 0; }
-    .link-card:nth-child(4) { animation: fadeUp 0.4s ease 0.36s forwards; opacity: 0; }
-    .link-card:nth-child(5) { animation: fadeUp 0.4s ease 0.43s forwards; opacity: 0; }
-    .link-card:nth-child(6) { animation: fadeUp 0.4s ease 0.5s forwards; opacity: 0; }
-    .link-card:nth-child(7) { animation: fadeUp 0.4s ease 0.57s forwards; opacity: 0; }
-    .socials-footer { animation: fadeUp 0.4s ease 0.65s forwards; opacity: 0; }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.3), 0 0 80px rgba(139, 92, 246, 0.1); }
+      50% { box-shadow: 0 0 60px rgba(139, 92, 246, 0.5), 0 0 120px rgba(139, 92, 246, 0.2); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-20px); }
+    }
+
+    @keyframes shimmer {
+      0% { left: -100%; }
+      100% { left: 200%; }
+    }
+
+    /* Floating ambient glows */
+    body::before {
+      animation: float 8s ease-in-out infinite;
+    }
+
+    body::after {
+      animation: float 10s ease-in-out infinite reverse;
+    }
+
+    /* Pulsing logo */
+    .profile-logo {
+      animation: pulseGlow 3s ease-in-out infinite;
+    }
+
+    /* Shimmer on link cards */
+    .link-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.06), transparent);
+      pointer-events: none;
+    }
+
+    .link-card:hover::after {
+      animation: shimmer 0.8s ease forwards;
+    }
+
+    /* Entrance animations */
+    .back-link { animation: fadeUp 0.4s ease forwards; opacity: 0; }
+    .profile { animation: fadeUp 0.6s ease 0.1s forwards; opacity: 0; }
+    .social-icons { animation: fadeUp 0.5s ease 0.25s forwards; opacity: 0; }
+    .link-card:nth-child(1) { animation: fadeUp 0.4s ease 0.35s forwards; opacity: 0; }
+    .link-card:nth-child(2) { animation: fadeUp 0.4s ease 0.42s forwards; opacity: 0; }
+    .link-card:nth-child(3) { animation: fadeUp 0.4s ease 0.49s forwards; opacity: 0; }
+    .link-card:nth-child(4) { animation: fadeUp 0.4s ease 0.56s forwards; opacity: 0; }
+    .link-card:nth-child(5) { animation: fadeUp 0.4s ease 0.63s forwards; opacity: 0; }
+    .link-card:nth-child(6) { animation: fadeUp 0.4s ease 0.7s forwards; opacity: 0; }
+    .link-card:nth-child(7) { animation: fadeUp 0.4s ease 0.77s forwards; opacity: 0; }
+    .socials-footer { animation: fadeUp 0.4s ease 0.85s forwards; opacity: 0; }
   </style>
 </head>
 <body>
@@ -276,7 +323,7 @@
 
     <!-- Profile Header -->
     <div class="profile">
-      <div class="profile-logo">N</div>
+      <div class="profile-logo"><img src="images/logo1.png" alt="NovaWorks Digital"></div>
       <h1>NovaWorks Digital</h1>
       <p>AI Automations for Small Businesses.<br>Save time &amp; scale up.</p>
     </div>
