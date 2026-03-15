@@ -311,14 +311,6 @@
     .link-card:nth-child(8) { animation: fadeUp 0.4s ease 0.84s forwards; opacity: 0; }
     .socials-footer { animation: fadeUp 0.4s ease 0.92s forwards; opacity: 0; }
 
-    /* Coursyx link icon image */
-    .link-icon-img {
-      width: 44px;
-      height: 44px;
-      flex-shrink: 0;
-      border-radius: 10px;
-      object-fit: cover;
-    }
   </style>
 </head>
 <body>
@@ -362,8 +354,10 @@
 
       <!-- Coursyx -->
       <a href="https://coursyx.com" target="_blank" rel="noopener" class="link-card">
-        <img src="coursyxbanner.jpg" alt="Coursyx" class="link-icon-img">
-        <span class="link-text">Coursyx</span>
+        <div class="link-icon link-icon-stroke">
+          <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        </div>
+        <span class="link-text">Coursyx - Your Automated Skool Course Creator!</span>
         <span class="link-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </a>
 
