@@ -308,40 +308,22 @@
     .link-card:nth-child(5) { animation: fadeUp 0.4s ease 0.63s forwards; opacity: 0; }
     .link-card:nth-child(6) { animation: fadeUp 0.4s ease 0.7s forwards; opacity: 0; }
     .link-card:nth-child(7) { animation: fadeUp 0.4s ease 0.77s forwards; opacity: 0; }
-    .socials-footer { animation: fadeUp 0.4s ease 0.85s forwards; opacity: 0; }
+    .link-card:nth-child(8) { animation: fadeUp 0.4s ease 0.84s forwards; opacity: 0; }
+    .socials-footer { animation: fadeUp 0.4s ease 0.92s forwards; opacity: 0; }
 
-    /* Coursyx Banner */
-    .coursyx-banner {
-      display: block;
-      margin-bottom: 24px;
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid #1e1e1e;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      animation: fadeUp 0.4s ease forwards;
-      opacity: 0;
-    }
-
-    .coursyx-banner:hover {
-      border-color: rgba(139, 92, 246, 0.25);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 30px rgba(139, 92, 246, 0.1);
-    }
-
-    .coursyx-banner img {
-      width: 100%;
-      display: block;
+    /* Coursyx link icon image */
+    .link-icon-img {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      object-fit: cover;
     }
   </style>
 </head>
 <body>
 
   <div class="socials-page">
-
-    <!-- Coursyx Banner -->
-    <a href="https://www.coursyx.com" target="_blank" rel="noopener" class="coursyx-banner">
-      <img src="coursyxbanner.jpg" alt="Coursyx">
-    </a>
 
     <!-- Back to site -->
     <a href="index" class="back-link">
@@ -377,6 +359,13 @@
 
     <!-- Link Cards -->
     <div class="links">
+
+      <!-- Coursyx -->
+      <a href="https://www.coursyx.com" target="_blank" rel="noopener" class="link-card">
+        <img src="coursyxbanner.jpg" alt="Coursyx" class="link-icon-img">
+        <span class="link-text">Coursyx</span>
+        <span class="link-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
 
       <!-- Headset -->
       <a href="https://amzn.to/46ROwXG" target="_blank" rel="noopener" class="link-card">
