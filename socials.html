@@ -7,7 +7,7 @@
   <meta name="description" content="Connect with NovaWorks Digital across all platforms.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%238b5cf6'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='800' font-size='18'%3EN%3C/text%3E%3C/svg%3E">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
@@ -309,11 +309,39 @@
     .link-card:nth-child(6) { animation: fadeUp 0.4s ease 0.7s forwards; opacity: 0; }
     .link-card:nth-child(7) { animation: fadeUp 0.4s ease 0.77s forwards; opacity: 0; }
     .socials-footer { animation: fadeUp 0.4s ease 0.85s forwards; opacity: 0; }
+
+    /* Coursyx Banner */
+    .coursyx-banner {
+      display: block;
+      margin-bottom: 24px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #1e1e1e;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      animation: fadeUp 0.4s ease forwards;
+      opacity: 0;
+    }
+
+    .coursyx-banner:hover {
+      border-color: rgba(139, 92, 246, 0.25);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(139, 92, 246, 0.1);
+    }
+
+    .coursyx-banner img {
+      width: 100%;
+      display: block;
+    }
   </style>
 </head>
 <body>
 
   <div class="socials-page">
+
+    <!-- Coursyx Banner -->
+    <a href="https://www.coursyx.com" target="_blank" rel="noopener" class="coursyx-banner">
+      <img src="coursyxbanner.jpg" alt="Coursyx">
+    </a>
 
     <!-- Back to site -->
     <a href="index" class="back-link">
