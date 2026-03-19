@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | NovaWorks Digital — We'll Be in Touch</title>
+  <meta name="description" content="Thanks for reaching out to NovaWorks Digital. We received your message and will respond within 24 hours.">
+  <meta name="theme-color" content="#8b5cf6">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Thank You | NovaWorks Digital — We'll Be in Touch">
+  <meta property="og:description" content="Thanks for reaching out to NovaWorks Digital. We received your message and will respond within 24 hours.">
+  <meta property="og:url" content="https://novaworksdigital.ca/thankyou">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%238b5cf6'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='800' font-size='18'%3EN%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+  <!-- Skip to main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="/" class="nav-logo">
+        <img src="../images/logo1.png" alt="NovaWorks Digital home" class="logo-img" width="40" height="40">
+        NovaWorks Digital
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="/">Home</a>
+        <a href="/#services">Services</a>
+        <a href="/services/">Web &amp; Chat</a>
+        <a href="/about/">About</a>
+        <a href="/socials/">Socials</a>
+        <a href="/contact/" class="nav-cta">Get in Touch</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- Thank You Content -->
+    <section class="thankyou-content">
+      <div class="container">
+        <div class="fade-in">
+          <div class="thankyou-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <h1 class="section-title">Thank You!</h1>
+          <p class="section-subtitle" style="margin: 0 auto 32px;">
+            Your message has been received. We'll get back to you within 24 hours to discuss how NovaWorks Digital can help your business grow.
+          </p>
+          <a href="/" class="btn btn-primary">
+            Back to Home <span class="btn-arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo">
+            <img src="../images/logo1.png" alt="NovaWorks Digital home" class="logo-img" width="40" height="40">
+            NovaWorks Digital
+          </a>
+          <p>Powerful, practical digital tools for the trades and industries that keep the world running.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <a href="/#services">Virtual Receptionist</a>
+          <a href="/#services">Digital Dialer</a>
+          <a href="/services/">Web Design &amp; Chat</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/socials/">Socials</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms & Conditions</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NovaWorks Digital. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js" defer></script>
+
+<script>
+  var vapiInstance = null;
+  const assistant = "71927097-2778-478b-9d9a-9d2160481322";
+  const apiKey = "41c497f9-2361-4f30-944b-d0e0e246a702";
+  const buttonConfig = {
+    position: "bottom-right",
+    offset: "40px",
+    width: "50px",
+    height: "50px",
+    idle: {
+      color: "#8b5cf6",
+      type: "round",
+      title: "Talk to Our Virtual Assistant",
+      subtitle: "Tools built for real-world businesses",
+      icon: "https://unpkg.com/lucide-static@0.321.0/icons/phone.svg"
+    },
+    active: {
+      color: "#8b5cf6",
+      type: "round",
+      title: "Call in progress",
+      subtitle: "End the call",
+      icon: "https://unpkg.com/lucide-static@0.321.0/icons/phone-off.svg"
+    }
+  };
+  (function(d, t) {
+    var g = document.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    g.src = "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js";
+    g.defer = true;
+    g.async = true;
+    s.parentNode.insertBefore(g, s);
+    g.onload = function() {
+      vapiInstance = window.vapiSDK.run({
+        apiKey: apiKey,
+        assistant: assistant,
+        config: buttonConfig
+      });
+    };
+  })(document, "script");
+</script>
+</body>
+</html>

@@ -1,14 +1,19 @@
-// ===== NAVBAR SCROLL EFFECT =====
+// ===== NAVBAR SCROLL EFFECT (debounced, passive) =====
 const navbar = document.getElementById('navbar');
 
 if (navbar && !navbar.classList.contains('scrolled')) {
+  let scrollTimeout;
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
+    if (scrollTimeout) return;
+    scrollTimeout = setTimeout(() => {
+      scrollTimeout = null;
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }, 100);
+  }, { passive: true });
 }
 
 // ===== MOBILE MENU TOGGLE =====
@@ -17,8 +22,9 @@ const navLinks = document.getElementById('navLinks');
 
 if (navToggle && navLinks) {
   navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
     navToggle.classList.toggle('active');
-    navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
 
   // Close menu when clicking a link
@@ -26,6 +32,7 @@ if (navToggle && navLinks) {
     link.addEventListener('click', () => {
       navToggle.classList.remove('active');
       navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
     });
   });
 
@@ -34,6 +41,7 @@ if (navToggle && navLinks) {
     if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
       navToggle.classList.remove('active');
       navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
     }
   });
 }
@@ -61,6 +69,13 @@ const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    // Check honeypot field
+    const honeypot = contactForm.querySelector('.form-hp input');
+    if (honeypot && honeypot.value) {
+      // Silently reject — likely a bot
+      return;
+    }
 
     const formData = new FormData(contactForm);
     const submitBtn = contactForm.querySelector('.form-submit');

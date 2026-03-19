@@ -3,29 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NovaWorks Digital | AI Automation for Small Business</title>
-  <meta name="description" content="NovaWorks Digital helps small businesses automate workflows, streamline operations, and scale smarter with AI automations, CRM systems, and API integrations.">
+  <title>NovaWorks Digital | Smart Business Automation Across Canada</title>
+  <meta name="description" content="Stop losing leads to voicemail. NovaWorks Digital builds virtual receptionists, digital dialers, and automated websites for contractors and small businesses across Canada.">
+  <meta name="theme-color" content="#8b5cf6">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NovaWorks Digital | Smart Business Automation Across Canada">
+  <meta property="og:description" content="Virtual receptionists, digital dialers, and automated websites built for contractors, real estate agents, and small businesses across Canada.">
+  <meta property="og:image" content="https://novaworksdigital.ca/images/og-image.jpg">
+  <meta property="og:url" content="https://novaworksdigital.ca/">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%238b5cf6'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='800' font-size='18'%3EN%3C/text%3E%3C/svg%3E">
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "NovaWorks Digital",
+    "url": "https://novaworksdigital.ca",
+    "email": "hello@novaworksdigital.ca",
+    "foundingDate": "2024",
+    "founder": {
+      "@type": "Person",
+      "name": "Jordan McIntosh"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Canada"
+    },
+    "description": "Virtual receptionists, digital dialers, and automated websites for contractors, real estate agents, and small businesses across Canada.",
+    "sameAs": []
+  }
+  </script>
 </head>
 <body>
+
+  <!-- Skip to Content -->
+  <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10000;padding:12px 24px;background:var(--accent);color:#fff;font-weight:600;text-decoration:none;border-radius:0 0 8px 0;" onfocus="this.style.position='fixed';this.style.left='0';this.style.top='0';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to main content</a>
 
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="index" class="nav-logo">
-        <img src="images/logo1.png" alt="NW" class="logo-img">
+      <a href="/" class="nav-logo">
+        <img src="images/logo1.png" alt="NovaWorks Digital logo" class="logo-img" width="36" height="36">
         NovaWorks Digital
       </a>
       <div class="nav-links" id="navLinks">
-        <a href="index" class="active">Home</a>
-        <a href="index#services">Services</a>
-        <a href="about">About</a>
-        <a href="socials">Socials</a>
-        <a href="synapticore">Synapticore</a>
-        <a href="contact" class="nav-cta">Get in Touch</a>
+        <a href="/" class="active">Home</a>
+        <a href="/#services">Services</a>
+        <a href="/services/">Web &amp; Chat</a>
+        <a href="/about/">About</a>
+        <a href="/socials/">Socials</a>
+        <a href="/contact/" class="nav-cta">Get in Touch</a>
       </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
         <span></span>
         <span></span>
         <span></span>
@@ -33,198 +72,240 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="dot"></span>
-          AI-Powered Business Tools
-        </div>
-        <h1 class="hero-title">
-          Automate Your Business.<br><span class="gradient-text">Scale Smarter.</span>
-        </h1>
-        <p class="hero-description">
-          We help small businesses automate workflows, streamline operations, and scale smarter with AI automations, CRM systems, and API integrations that save you time and increase profits.
-        </p>
-        <div class="hero-buttons">
-          <a href="contact" class="btn btn-primary">
-            Get Started <span class="btn-arrow">&rarr;</span>
-          </a>
-          <a href="about" class="btn btn-secondary">
-            Learn More
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <main id="main-content">
 
-  <!-- Stats Bar -->
-  <section class="stats-bar">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item fade-in">
-          <h3>24/7</h3>
-          <p>AI Availability</p>
-        </div>
-        <div class="stat-item fade-in">
-          <h3>100%</h3>
-          <p>Calls Answered</p>
-        </div>
-        <div class="stat-item fade-in">
-          <h3>10x</h3>
-          <p>Faster Follow-ups</p>
-        </div>
-        <div class="stat-item fade-in">
-          <h3>0</h3>
-          <p>Missed Opportunities</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section class="section" id="services">
-    <div class="container">
-      <div class="text-center fade-in">
-        <span class="section-label">What We Build</span>
-        <h2 class="section-title">Products That Work <span class="gradient-text">While You Sleep</span></h2>
-        <p class="section-subtitle">
-          Every tool we build is designed to save you time, win you more jobs, and let you get back to the work that matters.
-        </p>
-      </div>
-
-      <div class="services-grid">
-        <!-- AI Receptionist -->
-        <div class="service-card fade-in">
-          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-          <h3>AI Receptionist</h3>
-          <p>
-            An AI receptionist that answers your phones around the clock, booking appointments and answering common questions. Built specifically for contractors and real estate agents. Stop losing jobs to voicemail.
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="dot"></span>
+            Smart Digital Business Tools
+          </div>
+          <h1 class="hero-title">
+            Automate Your Business.<br><span class="gradient-text">Grow Without the Overhead.</span>
+          </h1>
+          <p class="hero-description">
+            Missed calls. Lost leads. Manual follow-ups eating your nights and weekends. We build digital tools that handle it all — so you can focus on the work that pays.
           </p>
-          <span class="service-tag">Available Now</span>
+          <div class="hero-buttons">
+            <a href="/contact/" class="btn btn-primary">
+              Book a Free Demo <span class="btn-arrow">&rarr;</span>
+            </a>
+            <a href="tel:+1" class="btn btn-secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call Us
+            </a>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <!-- NovaWorks Digital Dialer -->
-        <div class="service-card fade-in">
-          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
-          <h3>NovaWorks Digital Dialer</h3>
-          <p>
-            A streamlined platform to power through your call lists, track every conversation, and keep your pipeline moving. Close more deals without juggling spreadsheets or sticky notes.
+    <!-- Stats Bar -->
+    <section class="stats-bar" style="content-visibility: auto;">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item fade-in">
+            <span class="stat-number" aria-hidden="true">24/7</span>
+            <p>Digital Availability</p>
+          </div>
+          <div class="stat-item fade-in">
+            <span class="stat-number" aria-hidden="true">100%</span>
+            <p>Calls Answered</p>
+          </div>
+          <div class="stat-item fade-in">
+            <span class="stat-number" aria-hidden="true">10x</span>
+            <p>Faster Follow-Ups</p>
+          </div>
+          <div class="stat-item fade-in">
+            <span class="stat-number" aria-hidden="true">0</span>
+            <p>Missed Opportunities</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services" style="content-visibility: auto;">
+      <div class="container">
+        <div class="text-center fade-in">
+          <span class="section-label">What We Build</span>
+          <h2 class="section-title">Products That Work <span class="gradient-text">While You Sleep</span></h2>
+          <p class="section-subtitle">
+            Every tool we build is designed to save you time, win you more jobs, and let you get back to the work that matters.
           </p>
-          <span class="service-tag">Available Now</span>
         </div>
 
-        <!-- Web Design & Chatbots -->
-        <div class="service-card fade-in">
-          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
-          <h3>Web Design & Chatbots</h3>
-          <p>
-            Premium websites tailored to your vision with sleek, modern designs and seamless functionality. We also build custom AI chatbots that live right on your site, answering visitor questions, capturing leads, and booking appointments around the clock.
+        <div class="services-grid">
+          <!-- Virtual Receptionist -->
+          <div class="service-card fade-in">
+            <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <h3>Virtual Receptionist</h3>
+            <p>
+              Stop losing jobs to voicemail. Our virtual receptionist answers your calls 24/7 — booking appointments, answering common questions, and routing urgent requests. Built specifically for contractors and real estate agents who can't afford to miss a single lead.
+            </p>
+            <span class="service-tag">Available Now</span>
+          </div>
+
+          <!-- Digital Dialer -->
+          <div class="service-card fade-in">
+            <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <h3>Digital Dialer</h3>
+            <p>
+              A power dialing platform that tracks every conversation and keeps your pipeline moving. Close more deals without juggling spreadsheets or sticky notes. See who called, what was said, and what needs to happen next — all in one place.
+            </p>
+            <span class="service-tag">Available Now</span>
+          </div>
+
+          <!-- Web Design & Digital Assistants -->
+          <div class="service-card fade-in">
+            <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
+            <h3>Web Design &amp; Digital Assistants</h3>
+            <p>
+              Premium websites with built-in automated chat that captures leads and books appointments around the clock. No templates. No page builders. Custom-designed sites that turn visitors into paying customers — even at 2 a.m.
+            </p>
+            <span class="service-tag">Available Now</span>
+          </div>
+
+          <!-- Dial Deck -->
+          <div class="service-card fade-in">
+            <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/><path d="M16 14H8a4 4 0 0 0-4 4v2h16v-2a4 4 0 0 0-4-4z"/><circle cx="9" cy="6" r="0.5" fill="currentColor" stroke="none"/><circle cx="15" cy="6" r="0.5" fill="currentColor" stroke="none"/></svg></div>
+            <h3>Dial Deck</h3>
+            <p>
+              Automated outbound follow-up that nudges leads who received estimates but never called back. Handles callbacks, answers objections, and keeps prospects warm — so you stop leaving money on the table.
+            </p>
+            <span class="service-tag">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section" style="background: var(--bg-secondary); content-visibility: auto;">
+      <div class="container">
+        <div class="text-center fade-in">
+          <span class="section-label">How It Works</span>
+          <h2 class="section-title">Up and Running in <span class="gradient-text">Three Steps</span></h2>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card fade-in">
+            <div class="step-number">1</div>
+            <h3>Tell Us Where You're Losing Time</h3>
+            <p>We dig into your business — missed calls, slow follow-ups, manual booking headaches. You tell us what's costing you jobs and we map out the fix.</p>
+          </div>
+          <div class="step-card fade-in">
+            <div class="step-number">2</div>
+            <h3>We Build and Connect Everything</h3>
+            <p>Our team configures your digital tools, integrates them with your existing systems, and tests every scenario. No disruption. No learning curve.</p>
+          </div>
+          <div class="step-card fade-in">
+            <div class="step-number">3</div>
+            <h3>Watch Your Pipeline Fill Up</h3>
+            <p>Calls get answered. Leads get followed up. Appointments get booked. You focus on the work that pays while your digital systems handle the rest.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-section" style="content-visibility: auto;">
+      <div class="container">
+        <div class="cta-box fade-in">
+          <span class="section-label">Ready to Stop Losing Jobs?</span>
+          <h2 class="section-title">Let's Talk About What's Costing You Money</h2>
+          <p class="section-subtitle">
+            You didn't start your business to spend half your day chasing callbacks and managing spreadsheets. Book a free demo and we'll show you exactly how to fix that.
           </p>
-          <span class="service-tag">Available Now</span>
+          <div class="hero-buttons">
+            <a href="/contact/" class="btn btn-primary">
+              Book a Free Demo <span class="btn-arrow">&rarr;</span>
+            </a>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Dial Deck -->
-        <div class="service-card fade-in">
-          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"/><path d="M16 14H8a4 4 0 0 0-4 4v2h16v-2a4 4 0 0 0-4-4z"/><circle cx="9" cy="6" r="0.5" fill="currentColor" stroke="none"/><circle cx="15" cy="6" r="0.5" fill="currentColor" stroke="none"/></svg></div>
-          <h3>Dial Deck</h3>
-          <p>
-            An AI-powered outbound agent that automatically follows up with prospects who've received estimates. Handles callbacks, answers questions, and nudges leads toward decisions.
+    <!-- Website & Chat Teaser -->
+    <section class="cta-section" style="content-visibility: auto;">
+      <div class="container">
+        <div class="cta-box fade-in">
+          <span class="section-label">Websites That Talk Back</span>
+          <h2 class="section-title">Custom Websites With <span class="gradient-text">Built-In Digital Assistants</span></h2>
+          <p class="section-subtitle">
+            Every site we build comes with an integrated chat assistant — and optional voice calling — so your customers can talk directly to your website. 24/7. No forms. No voicemail.
           </p>
-          <span class="service-tag">Coming Soon</span>
+          <div class="hero-buttons">
+            <a href="/services/" class="btn btn-primary">Learn More <span class="btn-arrow">&rarr;</span></a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- How It Works -->
-  <section class="section" style="background: var(--bg-secondary);">
-    <div class="container">
-      <div class="text-center fade-in">
-        <span class="section-label">How It Works</span>
-        <h2 class="section-title">Up and Running in <span class="gradient-text">Three Steps</span></h2>
+    <!-- Second CTA -->
+    <section class="cta-section" style="content-visibility: auto;">
+      <div class="container">
+        <div class="cta-box fade-in">
+          <span class="section-label">No Contracts. No Risk.</span>
+          <h2 class="section-title">See It in Action — <span class="gradient-text">Book a Free Demo</span></h2>
+          <p class="section-subtitle">
+            Contractors, agents, and small business owners across Canada deserve the same digital advantages as the big guys. Let's make it happen.
+          </p>
+          <div class="hero-buttons">
+            <a href="/contact/" class="btn btn-primary">
+              Book a Free Demo <span class="btn-arrow">&rarr;</span>
+            </a>
+            <a href="mailto:hello@novaworksdigital.ca" class="btn btn-secondary">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email Us
+            </a>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="steps-grid">
-        <div class="step-card fade-in">
-          <div class="step-number">1</div>
-          <h3>Tell Us Your Needs</h3>
-          <p>We learn about your business, your workflow, and where you're losing time or missing opportunities.</p>
-        </div>
-        <div class="step-card fade-in">
-          <div class="step-number">2</div>
-          <h3>We Build Your Solution</h3>
-          <p>Our team configures your AI tools, integrates them with your systems, and tailors everything to fit.</p>
-        </div>
-        <div class="step-card fade-in">
-          <div class="step-number">3</div>
-          <h3>Watch It Work</h3>
-          <p>Your AI answers calls, follows up with leads, and keeps your pipeline moving while you focus on what you do best.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-box fade-in">
-        <span class="section-label">Ready to Scale?</span>
-        <h2 class="section-title">Stop Losing Jobs to Voicemail</h2>
-        <p class="section-subtitle">
-          Contractors, agents, and small business owners deserve the same technology advantages as billion-dollar companies. Let's make it happen.
-        </p>
-        <div class="hero-buttons">
-          <a href="contact" class="btn btn-primary">
-            Get Started Today <span class="btn-arrow">&rarr;</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index" class="nav-logo">
-            <img src="images/logo1.png" alt="NW" class="logo-img">
+          <a href="/" class="nav-logo">
+            <img src="images/logo1.png" alt="NovaWorks Digital logo" class="logo-img" width="36" height="36">
             NovaWorks Digital
           </a>
-          <p>Powerful, practical AI tools for the trades and industries that keep the world running.</p>
+          <p>Powerful, practical digital tools for the trades and businesses that keep Canada running.</p>
         </div>
         <div class="footer-col">
           <h4>Products</h4>
-          <a href="index#services">AI Receptionist</a>
-          <a href="index#services">Digital Dialer</a>
-          <a href="index#services">Web Design</a>
-          <a href="synapticore">Synapticore</a>
+          <a href="/#services">Virtual Receptionist</a>
+          <a href="/#services">Digital Dialer</a>
+          <a href="/services/">Web Design &amp; Chat</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
-          <a href="about">About</a>
-          <a href="contact">Contact</a>
-          <a href="socials">Socials</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/socials/">Socials</a>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>
-          <a href="privacy">Privacy Policy</a>
-          <a href="terms">Terms & Conditions</a>
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms &amp; Conditions</a>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 NovaWorks Digital. All rights reserved.</p>
         <div class="footer-bottom-links">
-          <a href="privacy">Privacy</a>
-          <a href="terms">Terms</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.js" defer></script>
 
 <script>
   var vapiInstance = null;
@@ -238,7 +319,7 @@
     idle: {
       color: "#8b5cf6",
       type: "round",
-      title: "Get AI-Powered",
+      title: "Talk to Our Virtual Assistant",
       subtitle: "Tools built for real-world businesses",
       icon: "https://unpkg.com/lucide-static@0.321.0/icons/phone.svg"
     },
