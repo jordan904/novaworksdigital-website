@@ -44,8 +44,8 @@
 
         var combined = (wave1 + wave2 + wave3) / 3;
 
-        var opacity = 0.08 + combined * 0.2;
-        var radius = baseRadius + combined * 0.6;
+        var opacity = 0.06 + combined * 0.35;
+        var radius = baseRadius + combined * 1.2;
 
         ctx.beginPath();
         ctx.arc(x, y, radius, 0, Math.PI * 2);
