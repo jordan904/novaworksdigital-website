@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | NovaWorks Digital</title>
+  <meta name="description" content="Get in touch with NovaWorks Digital. Let's talk about how we can help automate your business.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%238b5cf6'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='800' font-size='18'%3EN%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index" class="nav-logo">
+        <img src="images/logo1.png" alt="NW" class="logo-img">
+        NovaWorks Digital
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index">Home</a>
+        <a href="index#services">Services</a>
+        <a href="about">About</a>
+        <a href="socials">Socials</a>
+        <a href="synapticore">Synapticore</a>
+        <a href="contact" class="nav-cta active">Get in Touch</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <span class="section-label">Contact Us</span>
+      <h1 class="section-title">Let's Build Something <span class="gradient-text">Together</span></h1>
+      <p class="section-subtitle" style="margin: 0 auto;">
+        Ready to automate your business? Have questions about our products? We'd love to hear from you.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info fade-in">
+          <h2>Get in Touch</h2>
+          <p>
+            Whether you're a contractor tired of missing calls, a real estate agent looking to automate follow-ups, or a small business owner ready to scale, we're here to help.
+          </p>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div>
+              <h4>Email</h4>
+              <p>hello@novaworksdigital.ca</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <div>
+              <h4>Website</h4>
+              <p>novaworksdigital.ca</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <h4>Location</h4>
+              <p>Canada</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div>
+              <h4>Response Time</h4>
+              <p>We typically respond within 24 hours</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form fade-in" id="contactForm" action="https://formspree.io/f/mnjgpklp" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="John" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone (Optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+          </div>
+
+          <div class="form-group">
+            <label for="service">What are you interested in?</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="ai-receptionist">AI Receptionist</option>
+              <option value="dialer">NovaWorks Digital Dialer</option>
+              <option value="dial-deck">Dial Deck</option>
+              <option value="web-design">Web Design</option>
+              <option value="synapticore">Synapticore Platform</option>
+              <option value="other">Other / General Inquiry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Tell us about your business</label>
+            <textarea id="message" name="message" placeholder="What kind of business do you run? What challenges are you looking to solve?" required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">
+            Send Message <span class="btn-arrow">&rarr;</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index" class="nav-logo">
+            <img src="images/logo1.png" alt="NW" class="logo-img">
+            NovaWorks Digital
+          </a>
+          <p>Powerful, practical AI tools for the trades and industries that keep the world running.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <a href="index#services">AI Receptionist</a>
+          <a href="index#services">Digital Dialer</a>
+          <a href="index#services">Web Design</a>
+          <a href="synapticore">Synapticore</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about">About</a>
+          <a href="contact">Contact</a>
+          <a href="socials">Socials</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="privacy">Privacy Policy</a>
+          <a href="terms">Terms & Conditions</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NovaWorks Digital. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy">Privacy</a>
+          <a href="terms">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
