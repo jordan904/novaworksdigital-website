@@ -1,10 +1,3 @@
-/* ===== VAPI WIDGET FIX ===== */
-#vapi-support-btn,
-[id^="vapi"] {
-  position: fixed !important;
-  z-index: 9999 !important;
-}
-
 /* ===== CSS VARIABLES ===== */
 :root {
   --bg-primary: #000000;

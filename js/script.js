@@ -88,7 +88,7 @@ if (contactForm) {
       headers: { 'Accept': 'application/json' }
     }).then(response => {
       if (response.ok) {
-        window.location.href = 'thankyou';
+        window.location.href = '/thankyou/';
       } else {
         submitBtn.disabled = false;
         submitBtn.innerHTML = 'Send Message <span class="btn-arrow">&rarr;</span>';
