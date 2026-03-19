@@ -178,5 +178,46 @@
   </footer>
 
   <script src="js/script.js"></script>
+
+<script>
+  var vapiInstance = null;
+  const assistant = "71927097-2778-478b-9d9a-9d2160481322";
+  const apiKey = "41c497f9-2361-4f30-944b-d0e0e246a702";
+  const buttonConfig = {
+    position: "bottom-right",
+    offset: "40px",
+    width: "50px",
+    height: "50px",
+    idle: {
+      color: "#8b5cf6",
+      type: "round",
+      title: "Get AI-Powered",
+      subtitle: "Tools built for real-world businesses",
+      icon: "https://unpkg.com/lucide-static@0.321.0/icons/phone.svg"
+    },
+    active: {
+      color: "#8b5cf6",
+      type: "round",
+      title: "Call in progress",
+      subtitle: "End the call",
+      icon: "https://unpkg.com/lucide-static@0.321.0/icons/phone-off.svg"
+    }
+  };
+  (function(d, t) {
+    var g = document.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    g.src = "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js";
+    g.defer = true;
+    g.async = true;
+    s.parentNode.insertBefore(g, s);
+    g.onload = function() {
+      vapiInstance = window.vapiSDK.run({
+        apiKey: apiKey,
+        assistant: assistant,
+        config: buttonConfig
+      });
+    };
+  })(document, "script");
+</script>
 </body>
 </html>
