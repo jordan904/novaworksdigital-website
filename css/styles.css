@@ -50,6 +50,7 @@ body {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
 
 a {
   text-decoration: none;
@@ -1332,9 +1333,25 @@ input:focus-visible, textarea:focus-visible, select:focus-visible {
 }
 
 /* ===== VAPI CHAT BUTTON — STAY FIXED ===== */
-.vapi-btn {
+.vapi-btn,
+[id*="vapi"],
+[class*="vapi"] {
   position: fixed !important;
+  z-index: 99999 !important;
+}
+
+.vapi-btn {
   bottom: 40px !important;
   right: 40px !important;
-  z-index: 99999 !important;
+}
+
+@media (max-width: 768px) {
+  .vapi-btn,
+  [id*="vapi"],
+  [class*="vapi"] {
+    bottom: 20px !important;
+    right: 20px !important;
+    width: 56px !important;
+    height: 56px !important;
+  }
 }

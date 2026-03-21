@@ -55,7 +55,7 @@
     }
 
     if (!prefersReduced) {
-      time += 0.016;
+      time += 0.045;
       animId = requestAnimationFrame(draw);
     }
   }
