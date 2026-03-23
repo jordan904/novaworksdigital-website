@@ -63,18 +63,41 @@ const observer = new IntersectionObserver((entries) => {
 
 fadeElements.forEach(el => observer.observe(el));
 
-// ===== CONTACT FORM =====
+// ===== CONTACT FORM WITH SPAM PROTECTION =====
 const contactForm = document.getElementById('contactForm');
+const formLoadTime = Date.now();
 
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // Check honeypot field
-    const honeypot = contactForm.querySelector('.form-hp input');
+    // 1. Honeypot check
+    const honeypot = contactForm.querySelector('[name="website_url"]');
     if (honeypot && honeypot.value) {
-      // Silently reject — likely a bot
-      return;
+      return; // Bot filled the hidden field
+    }
+
+    // 2. Time-on-page check: reject if submitted in under 3 seconds
+    if (Date.now() - formLoadTime < 3000) {
+      return; // Too fast, likely a bot
+    }
+
+    // 3. Rate limit: max 3 submissions per hour via localStorage
+    const RATE_KEY = 'nw_form_submissions';
+    const RATE_LIMIT = 3;
+    const RATE_WINDOW = 60 * 60 * 1000; // 1 hour
+    try {
+      const stored = JSON.parse(localStorage.getItem(RATE_KEY) || '[]');
+      const now = Date.now();
+      const recent = stored.filter(t => now - t < RATE_WINDOW);
+      if (recent.length >= RATE_LIMIT) {
+        alert('You have submitted too many requests. Please try again later.');
+        return;
+      }
+      recent.push(now);
+      localStorage.setItem(RATE_KEY, JSON.stringify(recent));
+    } catch (_) {
+      // localStorage unavailable, proceed anyway
     }
 
     const formData = new FormData(contactForm);
@@ -91,12 +114,12 @@ if (contactForm) {
         window.location.href = '/thankyou/';
       } else {
         submitBtn.disabled = false;
-        submitBtn.innerHTML = 'Send Message <span class="btn-arrow">&rarr;</span>';
+        submitBtn.innerHTML = 'Book My Free Demo <span class="btn-arrow">&rarr;</span>';
         alert('Something went wrong. Please try again.');
       }
     }).catch(() => {
       submitBtn.disabled = false;
-      submitBtn.innerHTML = 'Send Message <span class="btn-arrow">&rarr;</span>';
+      submitBtn.innerHTML = 'Book My Free Demo <span class="btn-arrow">&rarr;</span>';
       alert('Something went wrong. Please try again.');
     });
   });
