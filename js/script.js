@@ -63,29 +63,87 @@ const observer = new IntersectionObserver((entries) => {
 
 fadeElements.forEach(el => observer.observe(el));
 
-// ===== CONTACT FORM WITH SPAM PROTECTION =====
+// ===== CONTACT FORM WITH FULL SPAM/BOT PROTECTION =====
 const contactForm = document.getElementById('contactForm');
 const formLoadTime = Date.now();
 
+// Generate a simple proof-of-work token (bots won't run JS to generate this)
+let humanToken = '';
 if (contactForm) {
+  const ts = Date.now().toString(36);
+  const rand = Math.random().toString(36).slice(2, 8);
+  humanToken = ts + '-' + rand;
+
+  // Inject the token as a hidden field so Formspree receives it
+  const tokenInput = document.createElement('input');
+  tokenInput.type = 'hidden';
+  tokenInput.name = '_nw_token';
+  tokenInput.value = humanToken;
+  contactForm.appendChild(tokenInput);
+
+  // Enable submit button (disabled by default in HTML to block non-JS bots)
+  const btn = contactForm.querySelector('.form-submit');
+  if (btn) btn.disabled = false;
+
+  // Track user interaction (bots don't move mice or press keys)
+  let hasInteracted = false;
+  const markInteraction = () => { hasInteracted = true; };
+  contactForm.addEventListener('keydown', markInteraction, { once: true });
+  contactForm.addEventListener('mousedown', markInteraction, { once: true });
+  contactForm.addEventListener('touchstart', markInteraction, { once: true, passive: true });
+
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // 1. Honeypot check
-    const honeypot = contactForm.querySelector('[name="website_url"]');
-    if (honeypot && honeypot.value) {
-      return; // Bot filled the hidden field
+    // 1. Honeypot check (hidden fields filled = bot)
+    const honeypot1 = contactForm.querySelector('[name="website_url"]');
+    const honeypot2 = contactForm.querySelector('[name="company_fax"]');
+    if ((honeypot1 && honeypot1.value) || (honeypot2 && honeypot2.value)) {
+      return;
     }
 
-    // 2. Time-on-page check: reject if submitted in under 3 seconds
+    // 2. Time-on-page check: reject under 3 seconds
     if (Date.now() - formLoadTime < 3000) {
-      return; // Too fast, likely a bot
+      return;
     }
 
-    // 3. Rate limit: max 3 submissions per hour via localStorage
+    // 3. User interaction check: must have typed or clicked in the form
+    if (!hasInteracted) {
+      return;
+    }
+
+    // 4. JS token check: bots that skip JS won't have this
+    if (!humanToken) {
+      return;
+    }
+
+    // 5. Email pattern check: block disposable/suspicious patterns
+    const emailField = contactForm.querySelector('[name="email"]');
+    if (emailField) {
+      const email = emailField.value.toLowerCase().trim();
+      const suspiciousPatterns = [
+        /test@test/,
+        /asdf@/,
+        /aaa@/,
+        /@mailinator\./,
+        /@guerrillamail\./,
+        /@tempmail\./,
+        /@throwaway\./,
+        /@yopmail\./,
+        /@sharklasers\./,
+        /@grr\.la/,
+        /@dispostable\./,
+      ];
+      if (suspiciousPatterns.some(p => p.test(email))) {
+        alert('Please use a valid email address.');
+        return;
+      }
+    }
+
+    // 6. Rate limit: max 3 submissions per hour via localStorage
     const RATE_KEY = 'nw_form_submissions';
     const RATE_LIMIT = 3;
-    const RATE_WINDOW = 60 * 60 * 1000; // 1 hour
+    const RATE_WINDOW = 60 * 60 * 1000;
     try {
       const stored = JSON.parse(localStorage.getItem(RATE_KEY) || '[]');
       const now = Date.now();
@@ -100,8 +158,10 @@ if (contactForm) {
       // localStorage unavailable, proceed anyway
     }
 
+    // 7. Double-submit prevention
     const formData = new FormData(contactForm);
     const submitBtn = contactForm.querySelector('.form-submit');
+    if (submitBtn.disabled) return;
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending...';
 

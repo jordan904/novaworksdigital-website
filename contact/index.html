@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Security Headers -->
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://api.vapi.ai; frame-src 'none'; object-src 'none'; base-uri 'self';">
   <title>Contact NovaWorks Digital | Book a Free Demo Today</title>
   <meta name="description" content="Book a free, no-obligation demo with NovaWorks Digital. See how our automation tools help contractors and local businesses save time and win more jobs.">
   <meta name="theme-color" content="#8b5cf6">
@@ -135,10 +141,12 @@
           <!-- Contact Form -->
           <form class="contact-form fade-in" id="contactForm" action="https://formspree.io/f/mnjgpklp" method="POST">
 
-            <!-- Honeypot field — hidden from real users -->
-            <div style="position: absolute; left: -9999px;" aria-hidden="true">
+            <!-- Honeypot fields: hidden from real users, bots fill them -->
+            <div style="position: absolute; left: -9999px; opacity: 0; height: 0; overflow: hidden;" aria-hidden="true">
               <label for="website_url">Do not fill this field</label>
               <input type="text" id="website_url" name="website_url" tabindex="-1" autocomplete="off">
+              <label for="company_fax">Fax number</label>
+              <input type="text" id="company_fax" name="company_fax" tabindex="-1" autocomplete="off">
             </div>
 
             <div class="form-row">
@@ -185,7 +193,7 @@
               <span class="form-error" id="messageError" aria-live="polite"></span>
             </div>
 
-            <button type="submit" class="form-submit">
+            <button type="submit" class="form-submit" disabled>
               Book My Free Demo <span class="btn-arrow">&rarr;</span>
             </button>
 
