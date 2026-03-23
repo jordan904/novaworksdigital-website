@@ -67,6 +67,9 @@ fadeElements.forEach(el => observer.observe(el));
 const contactForm = document.getElementById('contactForm');
 const formLoadTime = Date.now();
 
+// Endpoint assembled at runtime so bots can't scrape it from source
+const _ep = [104,116,116,112,115,58,47,47,102,111,114,109,115,112,114,101,101,46,105,111,47,102,47,109,110,106,103,112,107,108,112].map(c => String.fromCharCode(c)).join('');
+
 // Generate a simple proof-of-work token (bots won't run JS to generate this)
 let humanToken = '';
 if (contactForm) {
@@ -102,8 +105,8 @@ if (contactForm) {
       return;
     }
 
-    // 2. Time-on-page check: reject under 3 seconds
-    if (Date.now() - formLoadTime < 3000) {
+    // 2. Time-on-page check: reject under 5 seconds
+    if (Date.now() - formLoadTime < 5000) {
       return;
     }
 
@@ -114,6 +117,13 @@ if (contactForm) {
 
     // 4. JS token check: bots that skip JS won't have this
     if (!humanToken) {
+      return;
+    }
+
+    // 4b. Message length check: real inquiries have substance
+    const msgField = contactForm.querySelector('[name="message"]');
+    if (msgField && msgField.value.trim().length < 10) {
+      alert('Please provide more detail about your business.');
       return;
     }
 
@@ -165,7 +175,7 @@ if (contactForm) {
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending...';
 
-    fetch(contactForm.action, {
+    fetch(_ep, {
       method: 'POST',
       body: formData,
       headers: { 'Accept': 'application/json' }
