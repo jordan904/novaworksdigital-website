@@ -7,8 +7,8 @@
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://api.vapi.ai; frame-src 'none'; object-src 'none'; base-uri 'self';">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(self), geolocation=()">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self' https: blob:; connect-src 'self' https://formspree.io https://*.vapi.ai wss://*.vapi.ai wss://*.daily.co https://*.daily.co https://*.openai.com; frame-src https://*.vapi.ai https://*.daily.co; object-src 'none'; base-uri 'self';">
   <title>Contact NovaWorks Digital | Book a Free Demo Today</title>
   <meta name="description" content="Book a free, no-obligation demo with NovaWorks Digital. See how our automation tools help contractors and local businesses save time and win more jobs.">
   <meta name="theme-color" content="#8b5cf6">
@@ -178,9 +178,7 @@
               <label for="service">What are you interested in?</label>
               <select id="service" name="service" required>
                 <option value="" disabled selected>Select a service</option>
-                <option value="virtual-receptionist">Virtual Receptionist</option>
-                <option value="dialer">NovaWorks Digital Dialer</option>
-                <option value="dial-deck">Dial Deck</option>
+                <option value="virtual-receptionist">Callaris Virtual Receptionist</option>
                 <option value="web-design">Web Design</option>
                 <option value="synapticore">Synapticore Platform</option>
                 <option value="other">Other / General Inquiry</option>
@@ -220,8 +218,7 @@
         </div>
         <div class="footer-col">
           <h4>Products</h4>
-          <a href="/#services">Virtual Receptionist</a>
-          <a href="/#services">Digital Dialer</a>
+          <a href="/#services">Callaris Virtual Receptionist</a>
           <a href="/services/">Web Design &amp; Chat</a>
         </div>
         <div class="footer-col">
